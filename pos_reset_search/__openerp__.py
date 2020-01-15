@@ -6,13 +6,21 @@
         Reset search after click on product.""",
 
     'description': """
-        Reset search after click on product when there are still multiple products
-        in selection.
+        The POS search workflow is to type in product until there is only on product left
+        to be selected. Then the user will select the product by typing on enter. This 
+        workflow is very efficient yet it requires user formation.
+        
+        This add-on modifies the POS search workflow. This add-on will enable the use to
+        use the search to simply narrow down the product selection to a handfull of products. 
+        The user can then either use the default workflow described above, or use the mouse to
+        click on the product to add to the order.
+
+        This new workflow is deemed less efficient but has proven to help beginers. 
     """,
 
-    'author': "Le Nid",
+    'author': 'Cooperative le Nid',
     'website': "http://www.lenid.ch",
-
+    'license': 'AGPL-3',
     # Categories can be used to filter modules in modules listing
     # Check https://github.com/odoo/odoo/blob/11.0/odoo/addons/base/module/module_data.xml
     # for the full list
@@ -24,12 +32,6 @@
 
     # always loaded
     'data': [
-        # 'security/ir.model.access.csv',
-        'views/views.xml',
         'views/templates.xml',
-    ],
-    # only loaded in demonstration mode
-    'demo': [
-        'demo/demo.xml',
     ],
 }
