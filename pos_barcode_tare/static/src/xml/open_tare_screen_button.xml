@@ -3,7 +3,7 @@
     <t t-name="TareScreenButton">
         <span class="control-button">
             <i class="fa fa-print"></i>
-            Créer une etiquette de tare
+            Créer une étiquette de tare
         </span>
     </t>
 </templates>
