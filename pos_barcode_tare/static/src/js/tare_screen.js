@@ -108,10 +108,8 @@ odoo.define('tare-screen.screen', function (require) {
             this.print_web();
             this.click_back();
         },
-        click_next: function() {
-            this.pos.get_order().finalize();
-        },
         click_back: function() {
+            this.close()
             this.gui.show_screen(this.previous_screen);
         },
         renderElement: function() {
@@ -131,6 +129,7 @@ odoo.define('tare-screen.screen', function (require) {
         },
         close: function(){
             this._super();
+            delete this.weight;
             this.pos.proxy_queue.clear();
         },
     });
