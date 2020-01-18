@@ -51,8 +51,8 @@ odoo.define('tare-screen.screen', function (require) {
         barcode_data: function(weight, weight_prefix_id=21){
             var padding_size = 5;
             var void_product_id = '0'.repeat(padding_size);
-            var weight_in_milligram =  weight * 10e3;
-            var weight_with_padding = '0'.repeat(padding_size) + weight_in_milligram;
+            var weight_in_gram =  weight * 10e2;
+            var weight_with_padding = '0'.repeat(padding_size) + weight_in_gram;
             var padded_weight = weight_with_padding.substr(weight_with_padding.length - padding_size);
             var barcode_data = `${weight_prefix_id}${void_product_id}${padded_weight}`;
             var checksum = this.ean13_checksum(barcode_data);
